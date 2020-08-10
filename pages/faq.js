@@ -1,14 +1,15 @@
-import Container from "react-bootstrap/Container";
+import Layout from '../components/Layout';
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+
 export default function FAQ() {
   return (
-    <Container fluid>
+    <Layout>
       <Row>
         <Col>
           <h2>FAQ</h2>
         </Col>
       </Row>
-    </Container>
+    </Layout>
   );
 }

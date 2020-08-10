@@ -1,13 +1,12 @@
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import Layout from '../components/Layout';
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 export default function Amenities() {
   return (
-    <Container fluid>
+    <Layout>
       <Row>
         <Col>
           <h2>The Space</h2>
-
           <p>
             2 BR/2BA Condo with a view of the mountains! With our deluxe
             inflatable mattress, pull-out bed, and lots of extra blankets and
@@ -57,6 +56,6 @@ export default function Amenities() {
           </ul>
         </Col>
       </Row>
-    </Container>
+    </Layout>
   );
 }
