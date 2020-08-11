@@ -15,7 +15,6 @@ const Layout = props => (
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/amenities">Amenities</Nav.Link>
                 <Nav.Link href="/walkthrough">Walkthrough</Nav.Link>
-                <Nav.Link href="/photos">Photos</Nav.Link>
                 <Nav.Link href="/faq">FAQ</Nav.Link>
                 <Nav.Link href="/guidebook">Guidebook</Nav.Link>
                 <Nav.Link href="/location">Location</Nav.Link>
