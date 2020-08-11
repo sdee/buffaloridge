@@ -9,6 +9,7 @@
     "export": "npm run build && next export"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
     "@sanity/client": "^1.149.18",
     "@sanity/image-url": "^0.140.19",
     "boostrap": "^2.0.0",
