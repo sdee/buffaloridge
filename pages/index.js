@@ -1,5 +1,4 @@
 import Head from "next/head";
-// import styles from '../styles/Home.module.css'
 import sanityClient from "../client";
 import imageUrlBuilder from "@sanity/image-url";
 import Layout from "../components/Layout";
