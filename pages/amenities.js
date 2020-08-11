@@ -1,9 +1,13 @@
 import Layout from '../components/Layout';
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMountain } from '@fortawesome/free-solid-svg-icons'
+
 export default function Amenities() {
   return (
     <Layout>
+      <Row><Col><FontAwesomeIcon icon={faMountain} /></Col></Row>
       <Row>
         <Col>
           <h3>The space</h3>
