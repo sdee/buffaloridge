@@ -6,9 +6,9 @@ export default function Amenities() {
     <Layout>
       <Row>
         <Col>
-          <h2>The Space</h2>
+          <h3>The space</h3>
           <p>
-            2 BR/2BA Condo with a view of the mountains! With our deluxe
+            <b>2 BR/2BA Condo with a view of the mountains!</b> With our deluxe
             inflatable mattress, pull-out bed, and lots of extra blankets and
             pillows, six can sleep here comfortably. We offer ample closet
             space, bedding, hanging hooks, and other amenities for longer-stays.
@@ -31,27 +31,27 @@ export default function Amenities() {
             equipment, utensils, and dishwasher for you to use.
           </p>
 
-          <h2>Guest Access</h2>
+          <h3>Guest Access</h3>
 
           <p>
             The guest has access to the whole condo plus amenities of the
             building
           </p>
-
           <ul>
+          <li>Fireplace</li>
             <li>
               Shaded carport right under the unit, protecting your vehicle from
               the elements
             </li>
             <li>
               Convenient shuttle service that comes every 20 minutes during
-              standard hours.
+              standard hours
             </li>
             <li>
               Coin-operated laundry at a reasonable price (1.75 wash and 1.50
               dry)
             </li>
-            <li>Fireplace</li>
+            
             <li>Clubhouse pool (temporarily closed)</li>
           </ul>
         </Col>

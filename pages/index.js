@@ -1,16 +1,32 @@
 import Head from "next/head";
 // import styles from '../styles/Home.module.css'
+import sanityClient from "../client";
+import imageUrlBuilder from "@sanity/image-url";
 import Layout from "../components/Layout";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-export default function Home() {
+const Home = (props) => {
+  console.log(props);
+  const builder = imageUrlBuilder(sanityClient);
+
+  function urlFor(source) {
+    return builder.image(source);
+  }
+
   return (
     <Layout>
       <Row>
         <Col>
+      <img src={urlFor(props.image).width(800).url()} />
+      </Col>
+      </Row>
+      <Row>
+        
+        <Col>
+        <br/>
           <p>
             At our mountain condo, you can take advantage of all that the
-            Rockies have to offer while having a spacious, fully equipped home
+            Rockies have to offer while having a spacious, fully-equipped home
             to come back to. This is truly a place for all seasons!
           </p>
 
@@ -47,4 +63,11 @@ export default function Home() {
       </Row>
     </Layout>
   );
-}
+};
+
+Home.getInitialProps = async function (context) {
+  const { images = "" } = context.query;
+  const query = '*[_type == "featureImage" && section=="cover"][0]';
+  return await sanityClient.fetch(query, { images });
+};
+export default Home;

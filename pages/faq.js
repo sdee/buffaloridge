@@ -7,7 +7,7 @@ export default function FAQ() {
     <Layout>
       <Row>
         <Col>
-          <h2>FAQ</h2>
+          <h2>FAQs</h2>
         </Col>
       </Row>
     </Layout>
