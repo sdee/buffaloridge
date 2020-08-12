@@ -5,8 +5,8 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from 'react-bootstrap/Nav'
 const Layout = props => (
     <div>
-    <Container fluid>
-    <Row>
+    <Container>
+    <Row md={12}>
         <Col>
           <Navbar bg="light" expand="lg" >
             <Navbar.Brand href="#home">Buffalo Ridge</Navbar.Brand>
