@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMountain,
+  faSoap,
   faSkiing,
   faSnowflake,
   faFish,
@@ -26,9 +27,12 @@ import {
   faDoorOpen,
   faWifi,
   faFan,
-  faMugHot,
+  faHeadset,
+  faMusic,
+  faWater,
   faTv,
   faSwimmer,
+  faChild,
   faShoppingBasket,
   faCouch,
   faStore,
@@ -47,23 +51,56 @@ import {
 
 const Overview = () => {
   const amentities = [
-    [
-      <FontAwesomeIcon icon={faMapMarkerAlt} />,
-      "Located in Silverthorne, CO",
-    ],
+    [<FontAwesomeIcon icon={faMapMarkerAlt} />, "Located in Silverthorne, CO"],
     [
       <FontAwesomeIcon icon={faMountain} />,
-      "Surrounded by the Rockies in All Directions",
+      "Surrounded by the Rockies in all directions",
     ],
     [<FontAwesomeIcon icon={faHome} />, "2 Bedrooms and 2 Bathrooms"],
-    [<FontAwesomeIcon icon={faBed} />, "Sleeps six people comfortably"],
+    [
+      <FontAwesomeIcon icon={faBed} />,
+      "Sleeps six people comfortably and up to eight",
+    ],
     [<FontAwesomeIcon icon={faCouch} />, "833 Square Feet"],
   ];
   return <AmenitiesList amenities={amentities} />;
 };
 
-const KitchenAmenities = () => {
+const ComfortAmenities = () => {
   const amenities = [
+    [<FontAwesomeIcon icon={faFire} />, "Fireplace"],
+    [<FontAwesomeIcon icon={faCloudSun} />, "Deck to enjoy view of mountains"],
+    [
+      <FontAwesomeIcon icon={faTv} />,
+      "Two big-screen TVs so everyone doesn't need to watch the same thing",
+    ],
+    [<FontAwesomeIcon icon={faUtensils} />, "Ample dining space with a view"],
+    [<FontAwesomeIcon icon={faCouch} />, "Plenty of places to sit and relax"],
+    [
+      <FontAwesomeIcon icon={faSink} />,
+      "High-capacity dishwasher so you don't spend your vacation doing dishes",
+    ],
+    [<FontAwesomeIcon icon={faWifi} />, "High-speed Wifi for streaming"],
+  ];
+
+  return <AmenitiesList amenities={amenities} />;
+};
+
+const HouseAmenities = () => {
+  const amenities = [
+    [<FontAwesomeIcon icon={faDoorOpen} />, "Self-checkin"],
+    [
+      <FontAwesomeIcon icon={faSoap} />,
+      "Full, professional cleaning between guests",
+    ],
+    [
+      <FontAwesomeIcon icon={faFan} />,
+      "Breezy in summer with quality ceiling fans and wide windows",
+    ],
+    [
+      <FontAwesomeIcon icon={faSnowflake} />,
+      "Built-in heaters for the cozy winters",
+    ],
     [
       <FontAwesomeIcon icon={faCoffee} />,
       "We provide coffee, tea, and filtered water",
@@ -77,35 +114,6 @@ const KitchenAmenities = () => {
       "Fully-equipped kitchen with plenty pots, pans, plates, and utensils",
     ],
     [
-      <FontAwesomeIcon icon={faSink} />,
-      "High-capacity dishwasher so you don't spend your vacation doing dishes",
-    ],
-    [<FontAwesomeIcon icon={faUtensils} />, "Ample dining space with a view"],
-  ];
-
-  return <AmenitiesList amenities={amenities} />;
-};
-
-const HouseAmenities = () => {
-  const amenities = [
-    [<FontAwesomeIcon icon={faDoorOpen} />, "Self-checkin"],
-    [
-      <FontAwesomeIcon icon={faFan} />,
-      "With our quality ceiling fans and windows, it's breezy in summer",
-    ],
-    [
-      <FontAwesomeIcon icon={faSnowflake} />,
-      "Built-in heaters for the cozy winters",
-    ],
-    [<FontAwesomeIcon icon={faFire} />, "Fireplace"],
-    [<FontAwesomeIcon icon={faCloudSun} />, "Deck to enjoy view of mountains"],
-    [<FontAwesomeIcon icon={faWifi} />, "High-speed Wifi"],
-    [
-      <FontAwesomeIcon icon={faTv} />,
-      "Two big-screen TVs so everyone doesn't need to watch the same thing",
-    ],
-    [<FontAwesomeIcon icon={faCouch} />, "Plenty of places to sit and relax"],
-    [
       <FontAwesomeIcon icon={faShower} />,
       "Two full bathrooms with hot showers",
     ],
@@ -113,7 +121,6 @@ const HouseAmenities = () => {
   return <AmenitiesList amenities={amenities} />;
 };
 
-//swimming
 const BuildingAmenities = () => {
   const amenities = [
     [
@@ -128,6 +135,14 @@ const BuildingAmenities = () => {
       <FontAwesomeIcon icon={faBus} />,
       "Free shuttle service to trailheads and nearby towns, runs every 20 mins",
     ],
+    [
+      <FontAwesomeIcon icon={faSwimmer} />,
+      "Access to 4 club house with pools (temporarily closed)",
+    ],
+    [
+      <FontAwesomeIcon icon={faHeadset} />,
+      "Access to 24/7 Support for emergencies and critical issues",
+    ],
   ];
   return <AmenitiesList amenities={amenities} />;
 };
@@ -135,25 +150,25 @@ const BuildingAmenities = () => {
 const Outdoor = () => {
   const amenities = [
     [
-      <FontAwesomeIcon icon={faHiking} />,
-      "Nearest trailhead 8 minutes by foot  ",
+      <FontAwesomeIcon icon={faSkiing} />,
+      "5 ski resorts within 30 min drive and more including Vail a little further afield",
     ],
     [
-      <FontAwesomeIcon icon={faSkiing} />,
-      "5 ski resorts within 30 min drive and more including Vail a little further",
+      <FontAwesomeIcon icon={faHiking} />,
+      "Nearest trailhead 8 minutes by foot",
+    ],
+    [<FontAwesomeIcon icon={faChild} />, "Kid-friendly activities"],
+    [
+      <FontAwesomeIcon icon={faWater} />,
+      "Water sports including kayaking, sailing, and paddleboarding",
     ],
     [
       <FontAwesomeIcon icon={faFish} />,
       "One of best places in world to fly fish",
     ],
-    [<FontAwesomeIcon icon={faBiking} />, "Bike along the lake"],
     [
-      <FontAwesomeIcon icon={faBicycle} />,
-      "For the more adventurous, you can tackle a mountain biking trail",
-    ],
-    [
-      <FontAwesomeIcon icon={faGolfBall} />,
-      "3 miles from the Raven at Eagles Nest Golf Course",
+      <FontAwesomeIcon icon={faBiking} />,
+      "Bike paved trails along the lake or tackle a mountain biking trail",
     ],
     [<FontAwesomeIcon icon={faStar} />, "Clear view of night sky steps away"],
   ];
@@ -175,17 +190,29 @@ const TownAmenities = () => {
       <FontAwesomeIcon icon={faBeer} />,
       "Check out Colorado's the thriving microbrew scene",
     ],
+    [
+      <FontAwesomeIcon icon={faMusic} />,
+      "Live music including some of the best outdoor concert venues in the country",
+    ],
+    [
+      <FontAwesomeIcon icon={faGolfBall} />,
+      "3 miles from the legendary Raven at Eagles Nest Golf Course",
+    ],
   ];
   return <AmenitiesList amenities={amenities} />;
 };
 
 const Convenience = () => {
   const amenities = [
-    [<FontAwesomeIcon icon={faRoute} />, "Prime location for exploring The Rockies and the Blue River"],
+    [
+      <FontAwesomeIcon icon={faRoute} />,
+      "Prime location for exploring The Rockies and the Blue River",
+    ],
     [<FontAwesomeIcon icon={faRoad} />, "Exits from CO-9, CO-6, and I-70"],
     [
       <FontAwesomeIcon icon={faHamburger} />,
-      "Many fast-food options when you're on the go"],
+      "Many fast-food options when you're on the go",
+    ],
     [
       <FontAwesomeIcon icon={faShoppingBasket} />,
       "Three grocery stores within 20 minutes away make it convenient to stock up",
@@ -199,7 +226,7 @@ const Convenience = () => {
       "Outlet mall less than ten minutes away",
     ],
   ];
-  return <AmenitiesList amenities={amenities} />; 
+  return <AmenitiesList amenities={amenities} />;
 };
 
 export default function Amenities() {
@@ -211,23 +238,31 @@ export default function Amenities() {
           <Overview />
         </Col>
       </Row>
-      <Row><Col><br/></Col></Row>
+      <Row>
+        <Col>
+          <br />
+        </Col>
+      </Row>
       <Row>
         <Col xl={3}>
-          <b>Rest and Relax</b>
+          <b>All of the Essentials</b>
           <HouseAmenities />
         </Col>
         <Col xl={3}>
-          <b>A Kitchen to Call Your Own</b>
-          <KitchenAmenities />
+          <b>For Your Comfort</b>
+          <ComfortAmenities />
         </Col>
         <Col xl={3}>
-          <b>Amenities</b>
+          <b>Additional Amenities</b>
           <BuildingAmenities />
         </Col>
       </Row>
       <Row></Row>
-      <Row><Col><br/></Col></Row>
+      <Row>
+        <Col>
+          <br />
+        </Col>
+      </Row>
       <Row>
         <Col xl={3}>
           <b>Your Next Outdoor Adventure Awaits</b>
@@ -240,23 +275,29 @@ export default function Amenities() {
         <Col xl={3}>
           <b>Everything You Need in a Small Area</b>
           <Convenience />
-        </Col> 
+        </Col>
       </Row>
-      <Row><Col><br/></Col></Row>
+      <Row>
+        <Col>
+          <br />
+        </Col>
+      </Row>
       <Row>
         <Col xl={9}>
           <p>
-            <b>2 BR/2BA Condo with a view of the mountains!</b> Our condo is nestled in the Wildernest area of Buffalo Mountain yet only a short drive to the major ski resorts, hiking trails, shopping areas, and restaurants.
-            </p>
-            <p>
-             With our deluxe
-            inflatable mattress, pull-out bed, and lots of extra blankets and
-            pillows, six can sleep here comfortably. We offer ample closet
-            space, bedding, hanging hooks, and other amenities for longer-stays.
-            There’s plenty of space to move around and a dozen different little
-            spots to sit and relax. One of the best spots is to relax on our
-            deck with a beverage of your choice watching the sunset over the
-            mountains or star gazing.
+            <b>2 BR/2BA Condo with a view of the mountains!</b> Our condo is
+            nestled in the Wildernest area of Buffalo Mountain yet only a short
+            drive to the major ski resorts, hiking trails, shopping areas, and
+            restaurants.
+          </p>
+          <p>
+            With our deluxe inflatable mattress, pull-out bed, and lots of extra
+            blankets and pillows, six can sleep here comfortably. We offer ample
+            closet space, bedding, hanging hooks, and other amenities for
+            longer-stays. There’s plenty of space to move around and a dozen
+            different little spots to sit and relax. One of the best spots is to
+            relax on our deck with a beverage of your choice watching the sunset
+            over the mountains or star gazing.
           </p>
 
           <p>
