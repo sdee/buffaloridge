@@ -9,6 +9,10 @@
     "export": "npm run build && next export"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-regular-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "@sanity/client": "^1.149.18",
     "@sanity/image-url": "^0.140.19",
     "boostrap": "^2.0.0",

@@ -7,7 +7,7 @@ const Layout = props => (
     <div>
     <Container fluid>
     <Row>
-        <Col>
+        <Col xl={12}>
           <Navbar bg="light" expand="lg" >
             <Navbar.Brand href="#home">Buffalo Ridge</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
