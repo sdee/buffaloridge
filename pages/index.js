@@ -5,7 +5,6 @@ import Layout from "../components/Layout";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 const Home = (props) => {
-  console.log(props);
   const builder = imageUrlBuilder(sanityClient);
 
   function urlFor(source) {

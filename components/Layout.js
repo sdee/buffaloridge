@@ -13,8 +13,8 @@ const Layout = props => (
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Nav className="mr-auto" variant="pills"  activeKey="1">
                 <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="/amenities">Amenities</Nav.Link>
                 <Nav.Link href="/walkthrough">Walkthrough</Nav.Link>
+                <Nav.Link href="/amenities">Amenities</Nav.Link>
                 <Nav.Link href="/faq">FAQ</Nav.Link>
                 <Nav.Link href="/location">Location</Nav.Link>
                 <Nav.Link href="/about">About</Nav.Link>
