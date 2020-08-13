@@ -211,6 +211,7 @@ export default function Amenities() {
           <Overview />
         </Col>
       </Row>
+      <Row><Col><br/></Col></Row>
       <Row>
         <Col xl={3}>
           <b>Rest and Relax</b>
@@ -226,6 +227,7 @@ export default function Amenities() {
         </Col>
       </Row>
       <Row></Row>
+      <Row><Col><br/></Col></Row>
       <Row>
         <Col xl={3}>
           <b>Your Next Outdoor Adventure Awaits</b>
@@ -240,12 +242,14 @@ export default function Amenities() {
           <Convenience />
         </Col> 
       </Row>
-
+      <Row><Col><br/></Col></Row>
       <Row>
-        <Col>
-          <h3>The space</h3>
+        <Col xl={9}>
           <p>
-            <b>2 BR/2BA Condo with a view of the mountains!</b> With our deluxe
+            <b>2 BR/2BA Condo with a view of the mountains!</b> Our condo is nestled in the Wildernest area of Buffalo Mountain yet only a short drive to the major ski resorts, hiking trails, shopping areas, and restaurants.
+            </p>
+            <p>
+             With our deluxe
             inflatable mattress, pull-out bed, and lots of extra blankets and
             pillows, six can sleep here comfortably. We offer ample closet
             space, bedding, hanging hooks, and other amenities for longer-stays.
@@ -267,30 +271,6 @@ export default function Amenities() {
             stocking up for the week. There are plenty of pots, pans, cooking
             equipment, utensils, and dishwasher for you to use.
           </p>
-
-          <h3>Guest Access</h3>
-
-          <p>
-            The guest has access to the whole condo plus amenities of the
-            building
-          </p>
-          <ul>
-            <li>Fireplace</li>
-            <li>
-              Shaded carport right under the unit, protecting your vehicle from
-              the elements
-            </li>
-            <li>
-              Convenient shuttle service that comes every 20 minutes during
-              standard hours
-            </li>
-            <li>
-              Coin-operated laundry at a reasonable price (1.75 wash and 1.50
-              dry)
-            </li>
-
-            <li>Clubhouse pool (temporarily closed)</li>
-          </ul>
         </Col>
       </Row>
     </Layout>
