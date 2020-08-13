@@ -9,7 +9,7 @@ import {
   faSnowflake,
   faFish,
   faBeer,
-  faPizzaSlice,
+  faRoute,
   faSink,
   faBicycle,
   faBiking,
@@ -29,6 +29,7 @@ import {
   faMugHot,
   faTv,
   faSwimmer,
+  faShoppingBasket,
   faCouch,
   faStore,
   faShower,
@@ -40,21 +41,28 @@ import {
   faBed,
   faHome,
   faMapMarkerAlt,
-  faStar
+  faRoad,
+  faStar,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Overview = () => {
   const amentities = [
-    [<FontAwesomeIcon icon={faMapMarkerAlt}/>, "Silverthorne, CO"],
-    [<FontAwesomeIcon icon={faHome}/>, "2 Bedrooms and 2 Bathrooms"],
-    [<FontAwesomeIcon icon={faBed}/>, "Sleeps six people comfortably"],
-    [<FontAwesomeIcon icon={faCouch}/>, "833 Square Feet"]
-  ]
-  return <AmenitiesList amenities={amentities}/>
-}
+    [
+      <FontAwesomeIcon icon={faMapMarkerAlt} />,
+      "Located in Silverthorne, CO",
+    ],
+    [
+      <FontAwesomeIcon icon={faMountain} />,
+      "Surrounded by the Rockies in All Directions",
+    ],
+    [<FontAwesomeIcon icon={faHome} />, "2 Bedrooms and 2 Bathrooms"],
+    [<FontAwesomeIcon icon={faBed} />, "Sleeps six people comfortably"],
+    [<FontAwesomeIcon icon={faCouch} />, "833 Square Feet"],
+  ];
+  return <AmenitiesList amenities={amentities} />;
+};
 
 const KitchenAmenities = () => {
-
   const amenities = [
     [
       <FontAwesomeIcon icon={faCoffee} />,
@@ -80,48 +88,49 @@ const KitchenAmenities = () => {
 
 const HouseAmenities = () => {
   const amenities = [
-
     [<FontAwesomeIcon icon={faDoorOpen} />, "Self-checkin"],
-    [<FontAwesomeIcon icon={faFan} />, "With our quality ceiling fans and windows, it's breezy in summer"],
-    [<FontAwesomeIcon icon={faSnowflake} />, "Built-in heaters for the cozy winters"], 
-    [<FontAwesomeIcon icon={faFire} />, "Fireplace"], 
+    [
+      <FontAwesomeIcon icon={faFan} />,
+      "With our quality ceiling fans and windows, it's breezy in summer",
+    ],
+    [
+      <FontAwesomeIcon icon={faSnowflake} />,
+      "Built-in heaters for the cozy winters",
+    ],
+    [<FontAwesomeIcon icon={faFire} />, "Fireplace"],
     [<FontAwesomeIcon icon={faCloudSun} />, "Deck to enjoy view of mountains"],
     [<FontAwesomeIcon icon={faWifi} />, "High-speed Wifi"],
-    [<FontAwesomeIcon icon={faTv} />, "Two big-screen TVs so everyone doesn't need to watch the same thing"],
+    [
+      <FontAwesomeIcon icon={faTv} />,
+      "Two big-screen TVs so everyone doesn't need to watch the same thing",
+    ],
     [<FontAwesomeIcon icon={faCouch} />, "Plenty of places to sit and relax"],
-    [<FontAwesomeIcon icon={faShower} />, "Two full bathrooms with hot showers"], 
+    [
+      <FontAwesomeIcon icon={faShower} />,
+      "Two full bathrooms with hot showers",
+    ],
   ];
-  return <AmenitiesList amenities={amenities} />
+  return <AmenitiesList amenities={amenities} />;
 };
 
 //swimming
-const BuildingAmenities = () => (
-  <Row>
-    <Col md={6}>
-      <Row>
-        <Col sm={1}>
-          <FontAwesomeIcon icon={faTshirt} />
-        </Col>
-        <Col sm={7}>Laundry available in building</Col>
-      </Row>
-      <Row>
-        <Col sm={1}>
-          <FontAwesomeIcon icon={faCar} />
-        </Col>
-        <Col sm={7}>Shaded carport, protecting your car from the elements</Col>
-      </Row>
-
-      <Row>
-        <Col sm={1}>
-          <FontAwesomeIcon icon={faBus} />
-        </Col>
-        <Col sm={7}>
-          Free shuttle service to trailheads and nearby towns, runs every 20 mins
-        </Col>
-      </Row>
-    </Col>
-  </Row>
-);
+const BuildingAmenities = () => {
+  const amenities = [
+    [
+      <FontAwesomeIcon icon={faTshirt} />,
+      "Washer and dryer available in building",
+    ],
+    [
+      <FontAwesomeIcon icon={faCar} />,
+      "Shaded carport, protecting your car from the elements",
+    ],
+    [
+      <FontAwesomeIcon icon={faBus} />,
+      "Free shuttle service to trailheads and nearby towns, runs every 20 mins",
+    ],
+  ];
+  return <AmenitiesList amenities={amenities} />;
+};
 
 const Outdoor = () => {
   const amenities = [
@@ -131,48 +140,107 @@ const Outdoor = () => {
     ],
     [
       <FontAwesomeIcon icon={faSkiing} />,
-      "We are close to six of Colorado's premium resorts",
+      "5 ski resorts within 30 min drive and more including Vail a little further",
     ],
     [
       <FontAwesomeIcon icon={faFish} />,
       "One of best places in world to fly fish",
     ],
     [<FontAwesomeIcon icon={faBiking} />, "Bike along the lake"],
-    [<FontAwesomeIcon icon={faBicycle} />, "For the more adventurous, you can tackle a mountain biking trail"],
-    [<FontAwesomeIcon icon={faGolfBall} />, "Golf courses"],
-    [<FontAwesomeIcon icon={faStar} />, "Clear view of night sky steps away"]
+    [
+      <FontAwesomeIcon icon={faBicycle} />,
+      "For the more adventurous, you can tackle a mountain biking trail",
+    ],
+    [
+      <FontAwesomeIcon icon={faGolfBall} />,
+      "3 miles from the Raven at Eagles Nest Golf Course",
+    ],
+    [<FontAwesomeIcon icon={faStar} />, "Clear view of night sky steps away"],
   ];
   return <AmenitiesList amenities={amenities} />;
 };
 
 const TownAmenities = () => {
- const amenities = [
-   [<FontAwesomeIcon icon={faUtensils}/>, "Enjoy a variety of dining options less than twenty minutes away"],
-[<FontAwesomeIcon icon={faHamburger}/>, "Many fast-food options when you're on the go"],
-[<FontAwesomeIcon icon={faStore}/>, "Explore the towns of Silverthorne, Dillon, and Frisco"],
- [<FontAwesomeIcon icon={faShoppingBag} />, "Outlet mall less than ten minutes away"],
- [<FontAwesomeIcon icon={faCartArrowDown} />, "Big stores like Target, Walmart, and REI close by in case you forget something"],
- [<FontAwesomeIcon icon={faBeer} />, "Check out Colorado's the thriving microbrew scene"],
- [<FontAwesomeIcon icon={faCarrot} />, "Farmer's Market every Friday"],
- ];
- return <AmenitiesList amenities={amenities}/>
-}
+  const amenities = [
+    [
+      <FontAwesomeIcon icon={faUtensils} />,
+      "Enjoy a variety of dining options less than twenty minutes away",
+    ],
+    [<FontAwesomeIcon icon={faCarrot} />, "Farmer's Market every Friday"],
+    [
+      <FontAwesomeIcon icon={faStore} />,
+      "Explore the towns of Silverthorne, Dillon, and Frisco",
+    ],
+    [
+      <FontAwesomeIcon icon={faBeer} />,
+      "Check out Colorado's the thriving microbrew scene",
+    ],
+  ];
+  return <AmenitiesList amenities={amenities} />;
+};
+
+const Convenience = () => {
+  const amenities = [
+    [<FontAwesomeIcon icon={faRoute} />, "Prime location for exploring The Rockies and the Blue River"],
+    [<FontAwesomeIcon icon={faRoad} />, "Exits from CO-9, CO-6, and I-70"],
+    [
+      <FontAwesomeIcon icon={faHamburger} />,
+      "Many fast-food options when you're on the go"],
+    [
+      <FontAwesomeIcon icon={faShoppingBasket} />,
+      "Three grocery stores within 20 minutes away make it convenient to stock up",
+    ],
+    [
+      <FontAwesomeIcon icon={faCartArrowDown} />,
+      "Target, Walmart, and REI close by in case you forget something",
+    ],
+    [
+      <FontAwesomeIcon icon={faShoppingBag} />,
+      "Outlet mall less than ten minutes away",
+    ],
+  ];
+  return <AmenitiesList amenities={amenities} />; 
+};
 
 export default function Amenities() {
   return (
     <Layout>
-      Overview
-      <Overview/>
-      Kitchen Amenities
-      <KitchenAmenities />
-      Building Amenities
-      <BuildingAmenities />
-      Outdoor Amentities
-      <Outdoor />
-      House Amenities
-      <HouseAmenities/>
-      Town Amenities
-      <TownAmenities/>
+      <Row>
+        <Col xl={5}>
+          <b>Overview</b>
+          <Overview />
+        </Col>
+      </Row>
+      <Row>
+        <Col xl={3}>
+          <b>Rest and Relax</b>
+          <HouseAmenities />
+        </Col>
+        <Col xl={3}>
+          <b>A Kitchen to Call Your Own</b>
+          <KitchenAmenities />
+        </Col>
+        <Col xl={3}>
+          <b>Amenities</b>
+          <BuildingAmenities />
+        </Col>
+      </Row>
+      <Row></Row>
+      <Row>
+        <Col xl={3}>
+          <b>Your Next Outdoor Adventure Awaits</b>
+          <Outdoor />
+        </Col>
+        <Col xl={3}>
+          <b>Full of Local Flavor</b>
+          <TownAmenities />
+        </Col>
+        <Col xl={3}>
+          <b>Everything You Need in a Small Area</b>
+          <Convenience />
+        </Col> 
+      </Row>
+
       <Row>
         <Col>
           <h3>The space</h3>

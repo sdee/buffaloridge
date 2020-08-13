@@ -5,9 +5,9 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from 'react-bootstrap/Nav'
 const Layout = props => (
     <div>
-    <Container>
-    <Row md={12}>
-        <Col>
+    <Container fluid>
+    <Row>
+        <Col xl={12}>
           <Navbar bg="light" expand="lg" >
             <Navbar.Brand href="#home">Buffalo Ridge</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />

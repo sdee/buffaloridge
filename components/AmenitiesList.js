@@ -5,14 +5,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const AmenitiesList = ({ amenities }) => {
   const rows = amenities.map((amenity) => (
     <Row>
-      <Col sm={1}>{amenity[0]}</Col> <Col sm={7}>{amenity[1]}</Col>
+      <Col xl={1}>{amenity[0]}</Col> <Col xl={11}>{amenity[1]}</Col>
     </Row>
   ));
 
   return (
-    <Row>
-      <Col md={6}>{rows}</Col>
-    </Row>
+    // <Row>
+    //   <Col xl={6}>{rows}</Col>
+    // </Row>
+    <>
+    {rows}
+    </>
   );
 };
 
