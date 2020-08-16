@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Navbar from "react-bootstrap/Navbar";
 import Nav from 'react-bootstrap/Nav'
 const Layout = props => (
-    <div>
+    <body>
     <Container fluid>
     <Row>
         <Col xl={12}>
@@ -25,7 +25,7 @@ const Layout = props => (
       </Row>
       {props.children}
         </Container>
-        </div>
+        </body>
 
   );
   

@@ -12,14 +12,12 @@ import {
   faBeer,
   faRoute,
   faSink,
-  faBicycle,
   faBiking,
   faMitten,
   faCoffee,
   faTshirt,
   faCar,
   faBus,
-  faCloudSun,
   faUtensils,
   faHiking,
   faCartArrowDown,
@@ -47,6 +45,12 @@ import {
   faMapMarkerAlt,
   faRoad,
   faStar,
+  faChessKnight,
+  faPlayCircle,
+  faCookieBite,
+  faShuttleVan,
+  faBaby,
+  faMoon,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Overview = () => {
@@ -56,12 +60,16 @@ const Overview = () => {
       <FontAwesomeIcon icon={faMountain} />,
       "Surrounded by the Rockies in all directions",
     ],
+    [<FontAwesomeIcon icon={faCouch} />, "833 Square Feet"],
     [<FontAwesomeIcon icon={faHome} />, "2 Bedrooms and 2 Bathrooms"],
     [
-      <FontAwesomeIcon icon={faBed} />,
-      "Sleeps six people comfortably and up to eight",
+      <FontAwesomeIcon icon={faMoon} />,
+      "Sleeps six adults comfortably and up to eight",
     ],
-    [<FontAwesomeIcon icon={faCouch} />, "833 Square Feet"],
+    [
+      <FontAwesomeIcon icon={faBed} />,
+      "Queen bed (tempurpedic adjustable), two twin beds, pull out bed, and optional inflatable full-sized bed",
+    ],
   ];
   return <AmenitiesList amenities={amentities} />;
 };
@@ -69,20 +77,24 @@ const Overview = () => {
 const ComfortAmenities = () => {
   const amenities = [
     [<FontAwesomeIcon icon={faFire} />, "Fireplace"],
-    [<FontAwesomeIcon icon={faCloudSun} />, "Deck to enjoy view of mountains"],
+    [<FontAwesomeIcon icon={faCookieBite} />, "Snacks for guests"],
     [
       <FontAwesomeIcon icon={faTv} />,
       "Two big-screen TVs so everyone doesn't need to watch the same thing",
     ],
     [<FontAwesomeIcon icon={faUtensils} />, "Ample dining space with a view"],
     [<FontAwesomeIcon icon={faCouch} />, "Plenty of places to sit and relax"],
+    [<FontAwesomeIcon icon={faChessKnight} />, "Board games for family fun"],
     [
       <FontAwesomeIcon icon={faSink} />,
       "High-capacity dishwasher so you don't spend your vacation doing dishes",
     ],
     [<FontAwesomeIcon icon={faWifi} />, "High-speed Wifi for streaming"],
+    [
+      <FontAwesomeIcon icon={faPlayCircle} />,
+      "Streaming accounts for music, TV, and movies",
+    ],
   ];
-
   return <AmenitiesList amenities={amenities} />;
 };
 
@@ -92,6 +104,10 @@ const HouseAmenities = () => {
     [
       <FontAwesomeIcon icon={faSoap} />,
       "Full, professional cleaning between guests",
+    ],
+    [
+      <FontAwesomeIcon icon={faShower} />,
+      "Two full bathrooms with hot showers",
     ],
     [
       <FontAwesomeIcon icon={faFan} />,
@@ -113,10 +129,7 @@ const HouseAmenities = () => {
       <FontAwesomeIcon icon={faMitten} />,
       "Fully-equipped kitchen with plenty pots, pans, plates, and utensils",
     ],
-    [
-      <FontAwesomeIcon icon={faShower} />,
-      "Two full bathrooms with hot showers",
-    ],
+    [<FontAwesomeIcon icon={faBaby} />, "Cradle available"],
   ];
   return <AmenitiesList amenities={amenities} />;
 };
@@ -208,7 +221,11 @@ const Convenience = () => {
       <FontAwesomeIcon icon={faRoute} />,
       "Prime location for exploring The Rockies and the Blue River",
     ],
-    [<FontAwesomeIcon icon={faRoad} />, "Exits from CO-9, CO-6, and I-70"],
+    [<FontAwesomeIcon icon={faRoad} />, "Exits from I-70, CO-9, CO-6"],
+    [
+      <FontAwesomeIcon icon={faShuttleVan} />,
+      "Shuttle available from Denver airport",
+    ],
     [
       <FontAwesomeIcon icon={faHamburger} />,
       "Many fast-food options when you're on the go",
@@ -299,13 +316,11 @@ export default function Amenities() {
             relax on our deck with a beverage of your choice watching the sunset
             over the mountains or star gazing.
           </p>
-
           <p>
             Our place offers a ton of natural light and it’s breezy even during
             hot, summer days while the fireplace and heater will keep you toasty
             during the winter.
           </p>
-
           <p>
             If you don’t want to go out for every meal, our kitchen features
             newly updated appliances and a large fridge which is perfect for
