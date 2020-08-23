@@ -2,6 +2,9 @@ export default {
   name: "featureImage",
   type: "document",
   title: "featureImage",
+  initialValue: () => ({
+    vertical: false,
+  }),
   fields: [
     {
       name: "title",
@@ -26,6 +29,7 @@ export default {
       title: "Image",
     },
     { name: "order", type: "number", title: "Order" },
+    { name: "vertical", type: "boolean", title: "Vertical?"}
   ],
   preview: {
     select: {

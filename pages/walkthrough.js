@@ -64,7 +64,6 @@ const SideNav = () => {
 };
 
 const Walkthrough = (props) => {
-  console.log(props);
   const builder = imageUrlBuilder(sanityClient);
 
   function urlFor(source) {
@@ -75,10 +74,11 @@ const Walkthrough = (props) => {
     const [title, key] = section;
     const imageDisplay = images ? (
       images.map((image) => {
+        const width = image.vertical === true ? 400 : 800;
         return (
           <>
             <br />
-            <img src={urlFor(image.image).width(800).url()} />
+            <img src={urlFor(image.image).width(width).url()} />
           </>
         );
       })
@@ -126,7 +126,6 @@ Walkthrough.getInitialProps = async function (context) {
   const query =
     '*[_type == "featureImage" && section in ["overview",  "diningarea", "livingroom", "kitchen", "masterbedroom", "masterbathroom", "secondbedroom", "secondbathroom", "deck", "view"]] | order(section asc, order asc)';
   const featuredImages = await sanityClient.fetch(query, { images });
-  console.log(featuredImages);
   //create map of lists keyed by section
   let imagesBySection = {};
   featuredImages.forEach((image) => {
