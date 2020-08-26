@@ -49,6 +49,10 @@ const Sections = ({ images }) => {
   return sections;
 };
 
+const LinkToTop = () => {
+  return (<><a href="#overview">Back to Top</a> <br/><br/></>) 
+};
+
 const SideNav = () => {
   const navs = SectionInfo.map((section) => (
     <>
@@ -56,7 +60,7 @@ const SideNav = () => {
     </>
   ));
   return (
-    <Nav className="flex-column">
+    <Nav className="flex-column sidenav" >
       <Nav.Link href="#overview">Top</Nav.Link>
       {navs}
     </Nav>
@@ -77,8 +81,9 @@ const Walkthrough = (props) => {
         const width = image.vertical === true ? 400 : 800;
         return (
           <>
-            <br />
-            <img src={urlFor(image.image).width(width).url()} />
+            <div className='feature-image'>
+            <img  src={urlFor(image.image).width(width).url()} />
+            </div>
           </>
         );
       })
@@ -90,7 +95,9 @@ const Walkthrough = (props) => {
       <div id={key}>
         <h3>{title}</h3>
         {imageDisplay}
+        <LinkToTop/>
       </div>
+
     );
   };
 
