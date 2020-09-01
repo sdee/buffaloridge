@@ -21,7 +21,7 @@ export default function FAQ() {
           <h3>Where is the closest grocery store?</h3>
           <p>The closest grocery store is a 10 minute drive with no traffic. Whole Foods and Safeway are 15 minutes away.</p>
           <h3>What's the best way to book?</h3>
-          <p>Currently, the best way to book is through our <a href="https://www.airbnb.com/manage-your-space/44892929">Airbnb</a>. Repeat guests or friends of friends can e-mail us.</p>
+          <p>Currently, the best way to book is through our <a href="https://www.airbnb.com//44892929">Airbnb</a>. Repeat guests or friends of friends can e-mail us.</p>
         </Col>
       </Row>
     </Layout>
